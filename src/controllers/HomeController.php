@@ -1,6 +1,6 @@
 <?php
 
-require_once '../models/Portfolio.php';
+require_once '../src/models/Portfolio.php';
 
 class HomeController
 {

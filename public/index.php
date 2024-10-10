@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-foreach (glob('../controllers/*.php') as $controllerFile) {
+foreach (glob('../src/controllers/*.php') as $controllerFile) {
     require_once $controllerFile;
 }
 
