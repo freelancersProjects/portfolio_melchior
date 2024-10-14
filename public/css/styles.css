@@ -37,10 +37,6 @@ header {
     text-align: center;
     color: #fff;
 }
-.Melchior-title:hover
-{
-    color: #FFC89A;
-}
 
 .nav-link {
     color: white !important;
@@ -50,20 +46,9 @@ header {
     color: #FFC89A !important;
 }
 
-.hero {
-    height: 100vh;
-    background-image: url('/public/assets/vinyl.png');
-    background-size: cover;
-    background-position: center;
+.container-global {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    font-family: 'Della Respira', serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    text-align: center;
+    height: 100vh;
 }
