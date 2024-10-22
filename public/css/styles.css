@@ -1,54 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
-
 :root {
     --color-primary: #FFC89A;
     --color-secondary: #E8D4FF;
     --color-background: #1F0D30;
+    --color-gray: #EAEAEA;
 }
 
-* {
+body,
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    color: white;
-    background-color: var(--color-background);
+/* GLOBAL */
+.font-family-della-respira {
+    font-family: "Della Respira", serif;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.font-family-montserrat {
+    font-family: "Montserrat", sans-serif;
 }
 
-.navbar {
-    padding: 20px;
+.font-weight-light {
+    font-weight: 300;
 }
 
-.Melchior-title
-{
-    font-size: 36px;
-    font-family: 'Della Respira', serif;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
+.font-weight-regular {
+    font-weight: 400;
 }
 
-.nav-link {
-    color: white !important;
+.font-weight-medium {
+    font-weight: 500;
 }
 
-.nav-link:hover {
-    color: #FFC89A !important;
+.font-weight-bold {
+    font-weight: 700;
 }
 
-.container-global {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* CUSTOM */
+.background-header {
+    background-image: url('/portfolio_melchior/public/img/vinyle.jpg');
     height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.text-center h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
