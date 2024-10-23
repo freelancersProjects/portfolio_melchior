@@ -1,3 +1,5 @@
+@import "global.css";
+
 :root {
     --color-primary: #FFC89A;
     --color-secondary: #E8D4FF;
@@ -14,37 +16,6 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 
-/* GLOBAL */
-.font-family-della-respira {
-    font-family: "Della Respira", serif;
-}
-
-.font-family-montserrat {
-    font-family: "Montserrat", sans-serif;
-}
-
-.font-weight-light {
-    font-weight: 300;
-}
-
-.font-weight-regular {
-    font-weight: 400;
-}
-
-.font-weight-medium {
-    font-weight: 500;
-}
-
-.font-weight-bold {
-    font-weight: 700;
-}
-
-ul, li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 /* CUSTOM */
 .background-header {
     background-image: url('/portfolio_melchior/public/img/vinyle.jpg');
@@ -55,6 +26,18 @@ ul, li {
     position: relative;
 }
 
+.background-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
 .text-center h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -63,8 +46,16 @@ ul, li {
 nav a {
     font-size: 1.2rem;
     text-decoration: none;
+    z-index: 2;
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+/* biography-section */
+
+.biography-section {
+    background-color: var(--color-gray);
+  
 }
