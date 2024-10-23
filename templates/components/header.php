@@ -19,10 +19,10 @@
 
 <header class="background-header font-family-della-respira font-weight-regular">
     <nav class="p-3 d-flex justify-content-between align-items-center">
-        <a href="#" class="text-white mx-2 fs-5 font-weight-regular">Melchior</a>
+        <a href="/portfolio_melchior/public/" class="text-white mx-2 fs-5 font-weight-regular">Melchior</a>
         <ul class="d-flex">
             <li>
-                <a href="#biographie" class="text-white mx-2">Biographie</a>
+                <a href="#biography" class="text-white mx-2">Biographie</a>
             </li>
             <li>
                 <a href="#mes-oeuvres" class="text-white mx-2">Mes oeuvres</a>

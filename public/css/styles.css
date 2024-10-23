@@ -3,7 +3,7 @@
 :root {
     --color-primary: #FFC89A;
     --color-secondary: #E8D4FF;
-    --color-background: #1F0D30;
+    --color-dark-blue: #1F0D30;
     --color-gray: #EAEAEA;
 }
 
@@ -37,7 +37,6 @@ html {
     z-index: 1;
 }
 
-
 .text-center h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -51,11 +50,4 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
-
-/* biography-section */
-
-.biography-section {
-    background-color: var(--color-gray);
-  
 }
