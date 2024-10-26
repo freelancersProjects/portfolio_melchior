@@ -1,17 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+@import "global.css";
 
 :root {
     --color-primary: #FFC89A;
     --color-secondary: #E8D4FF;
-    --color-dark-blue: #1F0D30;
+    --color-dark-purple: #1F0D30;
     --color-gray: #EAEAEA;
 }
 
-* {
+body,
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+}
+
+.titre-header{
+    font-size: 32px !important;
+    text-decoration: none !important;
 }
 
 /* CUSTOM */
@@ -24,20 +31,24 @@
     position: relative;
 }
 
-header {
+.background-header::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-}
-
-.navbar {
-    padding: 20px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .text-center h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.textHeader{
+    z-index: 2;
 }
 
 nav a {
@@ -46,13 +57,183 @@ nav a {
     z-index: 2;
 }
 
-.nav-link:hover {
-    color: #FFC89A !important;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.container-global {
+footer{
+    background-color: var(--color-dark-purple);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Artwork */
+.artwork-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px 20px 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.artwork-card:hover {
+    transform: translateY(-5px);
+}
+
+.artwork-img-top {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 15px;
+}
+
+
+.artwork-title {
+    color: #000000;
+    margin: 15px 0 20px 15px;
+    font-family: 'Della Respira', serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.artwork-description {
+    color: #333;
+    margin: 0 0 15px 15px;
+    flex-grow: 1 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.artwork-btn-container {
+    text-align: right;
+    margin-top: auto;
+    align-items: end;
+}
+
+.artwork-btn {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-dark-purple);
+    font-weight: bold;
+    margin: 25px 20px 20px 0;
+}
+
+.artwork-btn span {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.artwork-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Contact */
+.contact-section {
+    padding: 50px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-title {
+    font-size: 2rem;
+    color: #1F0D30;
+    font-family: 'Della Respira', serif;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: none;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    border-radius: inherit;
+}
+
+.contact-submit-btn {
+    background-color: #E8D4FF;
+    color: #1F0D30;
+    border: none;
+    padding: 10px 60px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 35px auto 0 auto;
+}
+
+.contact-submit-btn:hover {
+    background-color: #D3B8FF;
+}
+
+.contact-social-title {
+    font-size: 1.5rem;
+    font-family: 'Della Respira', serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-social-list {
+    list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
+}
+
+.contact-social-list li {
+    margin-bottom: 10px;
+}
+
+.contact-social-link {
+    color: #1F0D30;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
     align-items: center;
-    height: 100vh;
+}
+
+.contact-social-link i {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #1F0D30;
+}
+
+.container-social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    resize: none;
+    height: 45px;
+}
+
+.contact-form .form-control:focus {
+    outline: none;
+    box-shadow: none;
 }
