@@ -1,4 +1,4 @@
-@import "global.css";
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
 
 :root {
     --color-primary: #FFC89A;
@@ -7,9 +7,7 @@
     --color-gray: #EAEAEA;
 }
 
-body,
-html {
-    height: 100%;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,15 +24,15 @@ html {
     position: relative;
 }
 
-.background-header::before {
-    content: '';
+header {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    width: 100%;
+}
+
+.navbar {
+    padding: 20px;
 }
 
 .text-center h1 {
@@ -48,6 +46,13 @@ nav a {
     z-index: 2;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.nav-link:hover {
+    color: #FFC89A !important;
+}
+
+.container-global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
