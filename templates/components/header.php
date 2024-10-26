@@ -34,7 +34,7 @@
     </nav>
     <div class="d-flex align-items-center justify-content-center h-100">
         <div class="text-center text-white textHeader">
-            <h1 id="main-name">Melchior Reynaud</h1>
+            <h1 id="main-name"><?= $content[0]['main_name']; ?>
         </div>
     </div>
 </header>
