@@ -35,7 +35,18 @@
     </nav>
     <div class="d-flex align-items-center justify-content-center h-100">
         <div class="text-center text-white textHeader">
-            <h1>Melchior Reynaud</h1>
+            <h1 id="main-name">Melchior Reynaud</h1>
         </div>
     </div>
 </header>
+
+<script>
+    if (window.location.pathname !== '/portfolio_melchior/public/') {
+        document.querySelector('header').classList.remove('background-header');
+        document.querySelectorAll('.text-white').forEach(element => {
+            element.classList.remove('text-white');
+            element.classList.add('text-black');
+        });
+        document.getElementById('main-name').style.display = 'none';
+    }
+</script>
