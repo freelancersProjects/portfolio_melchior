@@ -7,6 +7,6 @@ class OeuvreController
     public function index()
     {
 
-        include '../templates/oeuvre.php';
+        include '../templates/artwork.php';
     }
 }
