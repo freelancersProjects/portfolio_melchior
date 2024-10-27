@@ -18,19 +18,25 @@
 </head>
 
 <header class="background-header font-family-della-respira font-weight-regular container-fluid">
-    <nav class="p-3 d-flex justify-content-between align-items-center">
-        <a href="/portfolio_melchior/public/" class="text-white mx-5 fs-5 font-weight-regular titre-header">Melchior</a>
-        <ul class="d-flex">
-            <li>
-                <a href="/portfolio_melchior/public/index.php#biography" class="text-white mx-5">Biographie</a>
-            </li>
-            <li>
-                <a href="/portfolio_melchior/public/index.php#mes-oeuvres" class="text-white mx-5">Mes oeuvres</a>
-            </li>
-            <li>
-                <a href="/portfolio_melchior/public/index.php#contact" class="text-white mx-5">Me contacter</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark p-3">
+        <a class="navbar-brand text-white mx-5 fs-5 font-weight-regular titre-header" href="/portfolio_melchior/public/">Melchior</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item mt-3 mt-lg-0">
+            <a class="text-white mx-5" href="/portfolio_melchior/public/index.php#biography">Biographie</a>
+        </li>
+        <li class="nav-item mt-3 mt-lg-0">
+            <a class="text-white mx-5" href="/portfolio_melchior/public/index.php#mes-oeuvres">Mes oeuvres</a>
+        </li>
+        <li class="nav-item mt-3 mt-lg-0">
+            <a class="text-white mx-5" href="/portfolio_melchior/public/index.php#contact">Me contacter</a>
+        </li>
+    </ul>
+
+        </div>
     </nav>
     <div class="d-flex align-items-center justify-content-center h-100">
         <div class="text-center text-white textHeader">

@@ -33,6 +33,10 @@ class OeuvreController
         } else {
             $latestArtworks = $this->artworkService->getLastThreeArtworks();
         }
+        if (!$selectedArtwork) {
+            header('Location: /index.php');
+            exit();
+        }
 
         $filters = $this->filterService->getAllFilters();
 

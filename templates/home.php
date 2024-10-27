@@ -25,14 +25,17 @@ include 'components/header.php';
             </div>
         </div>
     </div>
+
     <div class="text-center mt-5">
-        <iframe src="<?= $content[0]['video_bio']; ?>" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="<?= $content[0]['video_bio']; ?>" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
+</div>
 
 </section>
 
 <section id="mes-oeuvres">
-<div class="bg-gray p-5 mt-5">
+<div class="bg-gray p-0 mt-5 p-md-5">
         <?php
         include 'components/artworks.php';
         ?>

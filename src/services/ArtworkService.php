@@ -30,4 +30,5 @@ class ArtworkService
     {
         return $this->portfolio->getArtworksByFilter($filterId);
     }
+
 }
