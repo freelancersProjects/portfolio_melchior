@@ -2,7 +2,9 @@
 function ignoreSpecificTags($html, $tag = 'div') {
     return preg_replace('/<\/?' . $tag . '[^>]*>/', '', $html);
 }
-
+function stripHtmlTags($html) {
+    return strip_tags($html);
+}
 include 'components/header.php';
 ?>
 

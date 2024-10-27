@@ -1,4 +1,10 @@
 <?php
+function ignoreSpecificTags($html, $tag = 'div') {
+    return preg_replace('/<\/?' . $tag . '[^>]*>/', '', $html);
+}
+function stripHtmlTags($html) {
+    return strip_tags($html);
+}
 include 'components/header.php';
 ?>
 
@@ -26,7 +32,7 @@ include 'components/header.php';
                         <img src="<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
                         <h3 class="artwork-title"><?= htmlspecialchars($artwork['title']); ?></h3>
                         <p class="artwork-description">
-                            <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr($artwork['description'], 0, 200) . '...' : $artwork['description']); ?>
+                            <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr(stripHtmlTags($artwork['description']), 0, 200) . '...' : stripHtmlTags($artwork['description'])); ?>
                         </p>
                         <div class="artwork-btn-container">
                             <a href="index.php?route=oeuvre&id=<?= $artwork['id']; ?>" class="artwork-btn">En voir plus <span><img src="../public/img/arrow.svg" alt="Arrow"></span></a>

@@ -5,7 +5,7 @@
         <div class="filter-dropdown-container mb-4 p-0">
             <button class="filter-btn" onclick="toggleDropdown()">Filtrer par catégorie <span class="dropdown-arrow">▼</span></button>
             <ul class="dropdown-menu">
-                <li><a href="index.php?route=filtered_artworks">Toutes les œuvres</a></li> <!-- lien pour voir toutes les œuvres -->
+                <li><a href="index.php?route=filtered_artworks">Toutes les œuvres</a></li>
                 <?php foreach ($filters as $filter): ?>
                     <li>
                         <a href="index.php?route=filtered_artworks&filter_id=<?= htmlspecialchars($filter['id']); ?>">
@@ -23,7 +23,7 @@
                         <img src="<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
                         <h3 class="artwork-title"><?= htmlspecialchars($artwork['title']); ?></h3>
                         <p class="artwork-description">
-                            <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr($artwork['description'], 0, 200) . '...' : $artwork['description']); ?>
+                            <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr(stripHtmlTags($artwork['description']), 0, 200) . '...' : stripHtmlTags($artwork['description'])); ?>
                         </p>
                         <div class="artwork-btn-container">
                             <a href="index.php?route=oeuvre&id=<?= $artwork['id']; ?>" class="artwork-btn">En voir plus <span><img src="../public/img/arrow.svg" alt="Arrow"></span></a>
