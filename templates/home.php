@@ -31,7 +31,6 @@ include 'components/header.php';
         <iframe class="embed-responsive-item" src="<?= $content[0]['video_bio']; ?>" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 </div>
-
 </section>
 
 <section id="mes-oeuvres">
@@ -47,7 +46,6 @@ include 'components/header.php';
         <div class="row">
             <div class="col-md-6">
                 <h2 class="contact-title titre-glob">Formulaire de contact</h2>
-
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Votre nom</label>
@@ -68,7 +66,6 @@ include 'components/header.php';
                     <button type="submit" class="contact-submit-btn">Envoyer</button>
                 </form>
             </div>
-
             <div class="col-md-6 container-social">
                 <h3 class="contact-social-title">Réseaux sociaux</h3>
                 <ul class="contact-social-list">
