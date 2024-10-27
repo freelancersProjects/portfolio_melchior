@@ -22,8 +22,6 @@ switch ($route) {
         exit;
 }
 
-include '../templates/components/header.php';
-
 if (isset($controller)) {
     $controller->index();
 }
