@@ -8,7 +8,9 @@
                     <div class="artwork-card">
                         <img src="<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
                         <h3 class="artwork-title"><?= htmlspecialchars($artwork['title']); ?></h3>
-                        <p class="artwork-description"><?= htmlspecialchars($artwork['description']); ?></p>
+                        <p class="artwork-description">
+                            <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr($artwork['description'], 0, 200) . '...' : $artwork['description']); ?>
+                        </p>
                         <div class="artwork-btn-container">
                             <a href="index.php?route=oeuvre&id=<?= $artwork['id']; ?>" class="artwork-btn">En voir plus <span><img src="../public/img/arrow.svg" alt="Arrow"></span></a>
                         </div>
