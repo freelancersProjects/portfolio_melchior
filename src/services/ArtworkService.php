@@ -11,6 +11,11 @@ class ArtworkService
         $this->portfolio = new Portfolio();
     }
 
+    public function getAllArtworks()
+    {
+        return $this->portfolio->getAllArtworks();
+    }
+
     public function getLastThreeArtworks()
     {
         return $this->portfolio->getLastThreeArtworks();
@@ -19,5 +24,10 @@ class ArtworkService
     public function getArtworkById($id)
     {
         return $this->portfolio->getArtworkById($id);
+    }
+
+    public function getArtworksByFilter($filterId)
+    {
+        return $this->portfolio->getArtworksByFilter($filterId);
     }
 }

@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if ((window.location.pathname !== '/portfolio_melchior/public/' && window.location.pathname !== '/portfolio_melchior/public/index.php') || window.location.search.includes('=oeuvre')) {
+    if (
+        (window.location.pathname !== '/portfolio_melchior/public/' &&
+         window.location.pathname !== '/portfolio_melchior/public/index.php') ||
+        window.location.search.includes('=oeuvre') ||
+        window.location.search.includes('route=filtered_artworks')
+    ) {
         const header = document.querySelector('header');
         if (header) {
             header.classList.remove('background-header');

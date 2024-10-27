@@ -22,19 +22,19 @@
         <a href="/portfolio_melchior/public/" class="text-white mx-5 fs-5 font-weight-regular titre-header">Melchior</a>
         <ul class="d-flex">
             <li>
-                <a href="#biography" class="text-white mx-5">Biographie</a>
+                <a href="/portfolio_melchior/public/index.php#biography" class="text-white mx-5">Biographie</a>
             </li>
             <li>
-                <a href="#mes-oeuvres" class="text-white mx-5">Mes oeuvres</a>
+                <a href="/portfolio_melchior/public/index.php#mes-oeuvres" class="text-white mx-5">Mes oeuvres</a>
             </li>
             <li>
-                <a href="#contact" class="text-white mx-5">Me contacter</a>
+                <a href="/portfolio_melchior/public/index.php#contact" class="text-white mx-5">Me contacter</a>
             </li>
         </ul>
     </nav>
     <div class="d-flex align-items-center justify-content-center h-100">
         <div class="text-center text-white textHeader">
-            <h1 id="main-name"><?= $content[0]['main_name']; ?>
+            <h1 id="main-name"><?= $content[0]['main_name']; ?></h1>
         </div>
     </div>
 </header>

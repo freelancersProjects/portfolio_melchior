@@ -3,6 +3,8 @@
 :root {
     --color-primary: #FFC89A;
     --color-secondary: #E8D4FF;
+    --color-secondary-hover: #D3B8FF;
+    --color-music: #ad7dfc;
     --color-dark-purple: #1F0D30;
     --color-gray: #EAEAEA;
 }
@@ -75,9 +77,8 @@ footer{
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0 15px 20px 15px;
-    cursor: pointer;
     transition: transform 0.3s;
-    min-height: 500px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
 }
@@ -238,6 +239,8 @@ textarea {
     box-shadow: none;
 }
 
+/* Artwork */
+
 #artwork {
     background-color: #f2f2f2;
     padding: 50px 0;
@@ -263,4 +266,122 @@ textarea {
 
 #artwork .col-md-6 {
     padding: 15px;
+}
+
+/* filter */
+.filter-dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.filter-btn {
+    background-color: var(--color-secondary);
+    color: var(--color-dark-purple);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.dropdown-arrow {
+    font-size: 14px;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    z-index: 1;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+.filter-dropdown-container.active .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.filter-dropdown-container.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark-purple);
+    color: var(--color-gray);
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.play-pause {
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.progress-container {
+    flex: 1;
+    margin: 0 10px;
+    background: var(--color-secondary);
+    border-radius: 5px;
+    height: 5px;
+    cursor: pointer;
+}
+
+.progress {
+    background: var(--color-music);
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+}
+
+.current-time, .duration {
+    font-size: 12px;
+    margin-left: 10px;
+    color: var(--color-gray);
 }

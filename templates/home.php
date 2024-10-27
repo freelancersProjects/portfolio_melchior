@@ -69,6 +69,7 @@ include 'components/header.php';
                     <li><a href="javascript:void(0);" class="contact-social-link"><i class="fas fa-envelope"></i></a></li>
                     <li><a href="https://www.instagram.com/melchior_reynaud/" class="contact-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://soundcloud.com/melchiorcompositeur" class="contact-social-link" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
+                    <li><a href="https://open.spotify.com/intl-fr/artist/1EcY671rk7p6B1BhKlTIPn?si=6RefckL3SDufBFfqzHjghQ" class="contact-social-link" target="_blank"><i class="fab fa-spotify"></i></a></li>
                 </ul>
             </div>
         </div>

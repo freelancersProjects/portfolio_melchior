@@ -15,6 +15,9 @@ switch ($route) {
     case 'oeuvre':
         $controller = new OeuvreController();
         break;
+    case 'filtered_artworks':
+        $controller = new FilteredArtworksController();
+        break;
 
     default:
         http_response_code(404);
