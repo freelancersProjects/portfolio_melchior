@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
             element.classList.add('text-black');
         });
 
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            navbar.classList.remove('navbar-dark');
+        }
+
         const mainName = document.getElementById('main-name');
         if (mainName) {
             mainName.style.display = 'none';

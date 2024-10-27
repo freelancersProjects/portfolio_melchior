@@ -8,7 +8,7 @@ function stripHtmlTags($html) {
 include 'components/header.php';
 ?>
 
-<section id="artwork" class="bg-gray p-5">
+<section id="artwork" class="bg-gray p-0 p-md-5">
     <div class="container-fluid mb-5">
         <div class="row">
             <?php if (isset($selectedArtwork) && isset($_GET['id'])): ?>

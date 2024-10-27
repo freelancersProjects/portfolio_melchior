@@ -15,13 +15,14 @@ switch ($route) {
     case 'oeuvre':
         $controller = new OeuvreController();
         break;
+
     case 'filtered_artworks':
         $controller = new FilteredArtworksController();
         break;
 
     default:
         http_response_code(404);
-        echo "404 Not Found";
+        include '404.php';
         exit;
 }
 
@@ -30,3 +31,5 @@ if (isset($controller)) {
 }
 
 include '../templates/components/footer.php';
+
+?>
