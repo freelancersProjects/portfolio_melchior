@@ -20,6 +20,13 @@ class Portfolio
         return $stmt->fetchAll(PDO::FETCH_ASSOC); //FETCH_ASSOC : retourne un tableau indexé par le nom de la colonne comme retourné dans le jeu de résultats
     }
 
+    public function getAllArtworks()
+    {
+        $stmt = $this->pdo->query('SELECT * FROM t_artwork');
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getArtworkById($id)
     {
         $stmt = $this->pdo->prepare('SELECT * FROM t_artwork WHERE id = :id');
@@ -35,5 +42,17 @@ class Portfolio
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getAllFilters()
+    {
+        $stmt = $this->pdo->query('SELECT * FROM t_filter');
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getArtworksByFilter($filterId)
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM t_artwork WHERE filter_id = :filter_id');
+        $stmt->execute(['filter_id' => $filterId]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
 }
