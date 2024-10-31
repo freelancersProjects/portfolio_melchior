@@ -22,22 +22,24 @@ class FilteredArtworksController
         $filterId = isset($_GET['filter_id']) ? (int)$_GET['filter_id'] : 0;
         $content = $this->homeService->getHomeContent();
         $filters = $this->filterService->getAllFilters();
-
+    
+        // Initialisation de la variable pour le nom du filtre
+        $selectedFilterName = "Filtre inconnu";
+    
         if ($filterId === 0) {
             $artworks = $this->artworkService->getAllArtworks();
             $selectedFilterName = "Toutes les œuvres";
         } else {
             $artworks = $this->artworkService->getArtworksByFilter($filterId);
             foreach ($filters as $filter) {
-                if ($filter['id'] === $filterId) {
+                if ($filter['id'] == $filterId) {
                     $selectedFilterName = $filter['name_filter'];
                     break;
                 }
             }
-            $selectedFilterName = $selectedFilterName ?? "Filtre inconnu";
         }
-
+    
         include '../templates/filtered_artworks.php';
     }
-
+    
 }
