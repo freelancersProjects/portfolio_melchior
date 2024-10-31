@@ -55,4 +55,16 @@ class Portfolio
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function addContact($name, $email, $subject, $message)
+    {
+        $stmt = $this->pdo->prepare('INSERT INTO t_contact (name, email, subject, message) VALUES (:name, :email, :subject, :message)');
+        $stmt->execute([
+            'name' => $name,
+            'email' => $email,
+            'subject' => $subject,
+            'message' => $message
+        ]);
+        return $stmt->rowCount() > 0;
+    }
+
 }
