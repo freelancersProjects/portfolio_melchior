@@ -11,7 +11,8 @@ include 'components/header.php';
 
 <div class="container-fluid mt-5">
     <div class="row">
-    <h2 class="text-center font-family-della-respira titre-glob mb-5">            <?= htmlspecialchars($selectedFilterName); ?>
+    <h2 class="text-center font-family-della-respira titre-glob mb-5">  
+        <?= htmlspecialchars($selectedFilterName); ?>
     </h2>
         <div class="filter-dropdown-container mb-4 p-0">
             <button class="filter-btn" onclick="toggleDropdown()">Filtrer par catégorie <span class="dropdown-arrow">▼</span></button>

@@ -48,7 +48,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } catch (Exception $e) {
         echo "Erreur de PHPMailer: {$mail->ErrorInfo}";
     }
-} else {
-    echo "Méthode de requête invalide.";
 }
 ?>
