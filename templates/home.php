@@ -102,8 +102,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .then(response => response.text())
     .then(data => {
-        console.log("Réponse du serveur :", data);
-
         formMessage.style.display = 'block';
 
         if (data.includes('succès')) {
