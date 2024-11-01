@@ -67,6 +67,12 @@ li {
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    p {
+        text-align: center;
+    }
+}
+
 @media screen and (min-width: 1310px) {
     .container {
         max-width: 1280px;
