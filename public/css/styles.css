@@ -410,6 +410,15 @@ textarea {
     }
     .filter-dropdown-container {
         width: fit-content;
+        margin: auto;
+    }
+
+    .contact-form{
+        margin-bottom: 50px;
+    }
+
+    .artwork-description{
+        text-align: left;
     }
 }
 
