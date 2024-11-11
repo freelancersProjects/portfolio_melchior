@@ -21,7 +21,7 @@ include 'send_mail.php';
                     </p>
                 </div>
                 <div class="col-md-5">
-                    <img src="/portfolio_melchior/public/img/melchior_1024.jpg" alt="Image photo de profil Melchior" class="img-fluid">
+                    <img src="https://ganfgsptxa.melchior-reynaud.fr/uploads/images/<?= $content[0]['image_bio']; ?>" alt="Image photo de profil Melchior" class="img-fluid">
                 </div>
             </div>
         </div>
