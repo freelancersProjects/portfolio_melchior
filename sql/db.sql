@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS `t_contact` (
 
 CREATE TABLE IF NOT EXISTS `t_content` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `image_background` varchar(255) NOT NULL,
   `main_name` varchar(255) NOT NULL,
   `title_bio` varchar(255) NOT NULL,
   `description_bio` text NOT NULL,
@@ -45,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `t_artwork` (
   `image_1` varchar(255) NOT NULL,
   `image_2` varchar(255) NOT NULL,
   `image_3` varchar(255) NOT NULL,
+  `audio_artwork` varchar(500) NULL,
   `id_filter` int NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_filter`) REFERENCES `t_filter`(`id`)
