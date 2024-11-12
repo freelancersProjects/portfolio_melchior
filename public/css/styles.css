@@ -25,7 +25,7 @@ html {
 
 /* CUSTOM */
 .background-header {
-    background-image: url('/img/vinyle.jpg');
+    background-image: url('../img/vinyle.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
