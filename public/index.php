@@ -36,5 +36,3 @@ if (isset($controller)) {
 }
 
 include '../templates/components/footer.php';
-
-?>
