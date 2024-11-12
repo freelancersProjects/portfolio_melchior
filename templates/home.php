@@ -1,8 +1,10 @@
 <?php
-function ignoreSpecificTags($html, $tag = 'div') {
+function ignoreSpecificTags($html, $tag = 'div')
+{
     return preg_replace('/<\/?' . $tag . '[^>]*>/', '', $html);
 }
-function stripHtmlTags($html) {
+function stripHtmlTags($html)
+{
     return strip_tags($html);
 }
 
@@ -17,7 +19,7 @@ include 'send_mail.php';
                 <h2 class="text-center font-family-della-respira titre-glob mb-5"><?= $content[0]['title_bio']; ?></h2>
                 <div class="col-md-7">
                     <p class="font-family-montserrat font-weight-semi-bold color-dark-blue fs-15px">
-                    <?= ignoreSpecificTags($content[0]['description_bio'], 'div'); ?>
+                        <?= ignoreSpecificTags($content[0]['description_bio'], 'div'); ?>
                     </p>
                 </div>
                 <div class="col-md-5">
@@ -28,14 +30,14 @@ include 'send_mail.php';
     </div>
 
     <div class="text-center mt-5">
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="<?= $content[0]['video_bio']; ?>" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="<?= $content[0]['video_bio']; ?>" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
     </div>
-</div>
 </section>
 
 <section id="mes-oeuvres">
-<div class="bg-gray p-0 mt-5 p-md-5">
+    <div class="bg-gray p-0 mt-5 p-md-5">
         <?php
         include 'components/artworks.php';
         ?>
@@ -83,45 +85,45 @@ include 'send_mail.php';
 </section>
 
 <script>
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const formMessage = document.getElementById('formMessage');
-    const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const formMessage = document.getElementById('formMessage');
+        const formData = new FormData(this);
 
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-    submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+        submitBtn.disabled = true;
 
-    fetch('index.php?ajaxRequest=sendMail', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest'
-        }
-    })
-    .then(response => response.text())
-    .then(data => {
-        formMessage.style.display = 'block';
+        fetch('index.php?ajaxRequest=sendMail', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.text())
+            .then(data => {
+                formMessage.style.display = 'block';
 
-        if (data.includes('succès')) {
-            formMessage.style.color = 'green';
-            formMessage.textContent = "Votre message a été envoyé avec succès.";
-            this.reset();
-        } else {
-            formMessage.style.color = 'red';
-            formMessage.textContent = "Une erreur est survenue. Veuillez réessayer.";
-        }
-    })
-    .catch(error => {
-        console.error('Erreur:', error);
-        formMessage.style.display = 'block';
-        formMessage.style.color = 'red';
-        formMessage.textContent = "Une erreur de connexion est survenue. Veuillez réessayer.";
-    })
-    .finally(() => {
-        submitBtn.innerHTML = 'Envoyer';
-        submitBtn.disabled = false;
+                if (data.includes('succès')) {
+                    formMessage.style.color = 'green';
+                    formMessage.textContent = "Votre message a été envoyé avec succès.";
+                    this.reset();
+                } else {
+                    formMessage.style.color = 'red';
+                    formMessage.textContent = "Une erreur est survenue. Veuillez réessayer.";
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                formMessage.style.display = 'block';
+                formMessage.style.color = 'red';
+                formMessage.textContent = "Une erreur de connexion est survenue. Veuillez réessayer.";
+            })
+            .finally(() => {
+                submitBtn.innerHTML = 'Envoyer';
+                submitBtn.disabled = false;
+            });
     });
-});
 </script>

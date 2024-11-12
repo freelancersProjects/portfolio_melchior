@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -50,4 +51,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Erreur de PHPMailer: {$mail->ErrorInfo}";
     }
 }
-?>

@@ -18,23 +18,23 @@
 </head>
 
 <header class="background-header font-family-della-respira font-weight-regular container-fluid">
-<nav class="navbar navbar-expand-lg navbar-dark p-3">
+    <nav class="navbar navbar-expand-lg navbar-dark p-3">
         <a class="navbar-brand text-white mx-5 fs-5 font-weight-regular titre-header" href="/">Melchior</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-        <li class="nav-item mt-3 mt-lg-0">
-            <a class="text-white mx-5" href="https://melchior-reynaud.fr/#biography">Biographie</a>
-        </li>
-        <li class="nav-item mt-3 mt-lg-0">
-            <a class="text-white mx-5" href="https://melchior-reynaud.fr/#mes-oeuvres">Mes oeuvres</a>
-        </li>
-        <li class="nav-item mt-3 mt-lg-0">
-            <a class="text-white mx-5" href="https://melchior-reynaud.fr/#contact">Me contacter</a>
-        </li>
-    </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mt-3 mt-lg-0">
+                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#biography">Biographie</a>
+                </li>
+                <li class="nav-item mt-3 mt-lg-0">
+                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#mes-oeuvres">Mes oeuvres</a>
+                </li>
+                <li class="nav-item mt-3 mt-lg-0">
+                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#contact">Me contacter</a>
+                </li>
+            </ul>
 
         </div>
     </nav>
@@ -45,4 +45,3 @@
     </div>
 </header>
 <script src="/js/script.js"></script>
-

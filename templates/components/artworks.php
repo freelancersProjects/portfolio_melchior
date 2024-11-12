@@ -38,18 +38,18 @@
 </div>
 
 <script>
-function toggleDropdown() {
-    const dropdownContainer = document.querySelector('.filter-dropdown-container');
-    dropdownContainer.classList.toggle('active');
-}
-
-document.addEventListener('click', function(event) {
-    const dropdownContainer = document.querySelector('.filter-dropdown-container');
-    const isClickInside = dropdownContainer.contains(event.target);
-    const filterBtn = document.querySelector('.filter-btn');
-
-    if (!isClickInside && !filterBtn.contains(event.target)) {
-        dropdownContainer.classList.remove('active');
+    function toggleDropdown() {
+        const dropdownContainer = document.querySelector('.filter-dropdown-container');
+        dropdownContainer.classList.toggle('active');
     }
-});
+
+    document.addEventListener('click', function(event) {
+        const dropdownContainer = document.querySelector('.filter-dropdown-container');
+        const isClickInside = dropdownContainer.contains(event.target);
+        const filterBtn = document.querySelector('.filter-btn');
+
+        if (!isClickInside && !filterBtn.contains(event.target)) {
+            dropdownContainer.classList.remove('active');
+        }
+    });
 </script>

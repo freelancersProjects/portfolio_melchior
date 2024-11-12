@@ -1,8 +1,10 @@
 <?php
-function ignoreSpecificTags($html, $tag = 'div') {
+function ignoreSpecificTags($html, $tag = 'div')
+{
     return preg_replace('/<\/?' . $tag . '[^>]*>/', '', $html);
 }
-function stripHtmlTags($html) {
+function stripHtmlTags($html)
+{
     return strip_tags($html);
 }
 include 'components/header.php';
@@ -11,17 +13,17 @@ include 'components/header.php';
 
 <div class="container-fluid mt-5">
     <div class="row">
-    <h2 class="text-center font-family-della-respira titre-glob mb-5">
-        <?= htmlspecialchars($selectedFilterName); ?>
-    </h2>
+        <h2 class="text-center font-family-della-respira titre-glob mb-5">
+            <?= htmlspecialchars($selectedFilterName); ?>
+        </h2>
         <div class="filter-dropdown-container mb-4 p-0">
             <button class="filter-btn" onclick="toggleDropdown()">Filtrer par catégorie <span class="dropdown-arrow">▼</span></button>
             <ul class="dropdown-menu">
                 <li><a href="index.php?route=filtered_artworks&filter_id=0">Toutes les œuvres</a></li>
                 <?php foreach ($filters as $filter): ?>
                     <li><a href="index.php?route=filtered_artworks&filter_id=<?= htmlspecialchars($filter['id']); ?>">
-                        <?= mb_strtoupper(htmlspecialchars($filter['name_filter']), 'UTF-8'); ?>
-                    </a></li>
+                            <?= mb_strtoupper(htmlspecialchars($filter['name_filter']), 'UTF-8'); ?>
+                        </a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -48,18 +50,18 @@ include 'components/header.php';
 </div>
 
 <script>
-function toggleDropdown() {
-    const dropdownContainer = document.querySelector('.filter-dropdown-container');
-    dropdownContainer.classList.toggle('active');
-}
-
-document.addEventListener('click', function(event) {
-    const dropdownContainer = document.querySelector('.filter-dropdown-container');
-    const isClickInside = dropdownContainer.contains(event.target);
-    const filterBtn = document.querySelector('.filter-btn');
-
-    if (!isClickInside && !filterBtn.contains(event.target)) {
-        dropdownContainer.classList.remove('active');
+    function toggleDropdown() {
+        const dropdownContainer = document.querySelector('.filter-dropdown-container');
+        dropdownContainer.classList.toggle('active');
     }
-});
+
+    document.addEventListener('click', function(event) {
+        const dropdownContainer = document.querySelector('.filter-dropdown-container');
+        const isClickInside = dropdownContainer.contains(event.target);
+        const filterBtn = document.querySelector('.filter-btn');
+
+        if (!isClickInside && !filterBtn.contains(event.target)) {
+            dropdownContainer.classList.remove('active');
+        }
+    });
 </script>
