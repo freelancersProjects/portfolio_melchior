@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     if (
-        (window.location.pathname !== '/portfolio_melchior/public/' &&
-         window.location.pathname !== '/portfolio_melchior/public/index.php') ||
+        (window.location.pathname !== '/' &&
+         window.location.pathname !== '/index.php') ||
         window.location.search.includes('=oeuvre') ||
         window.location.search.includes('route=filtered_artworks')
     ) {
