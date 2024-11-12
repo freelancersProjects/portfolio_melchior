@@ -36,7 +36,7 @@ include 'components/header.php';
                             <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr(stripHtmlTags($artwork['description']), 0, 200) . '...' : stripHtmlTags($artwork['description'])); ?>
                         </p>
                         <div class="artwork-btn-container">
-                            <a href="index.php?route=oeuvre&id=<?= $artwork['id']; ?>" class="artwork-btn">En voir plus <span><img src="../public/img/arrow.svg" alt="Arrow"></span></a>
+                            <a href="index.php?route=oeuvre&id=<?= $artwork['id']; ?>" class="artwork-btn">En voir plus <span><img src="/img/arrow.svg" alt="Arrow"></span></a>
                         </div>
                     </div>
                 </div>

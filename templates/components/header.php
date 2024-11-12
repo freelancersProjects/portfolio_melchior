@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- FONT -->
@@ -26,13 +26,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
         <li class="nav-item mt-3 mt-lg-0">
-            <a class="text-white mx-5" href="/portfolio_melchior/public/index.php#biography">Biographie</a>
+            <a class="text-white mx-5" href="https://melchior-reynaud.fr/#biography">Biographie</a>
         </li>
         <li class="nav-item mt-3 mt-lg-0">
-            <a class="text-white mx-5" href="/portfolio_melchior/public/index.php#mes-oeuvres">Mes oeuvres</a>
+            <a class="text-white mx-5" href="https://melchior-reynaud.fr/#mes-oeuvres">Mes oeuvres</a>
         </li>
         <li class="nav-item mt-3 mt-lg-0">
-            <a class="text-white mx-5" href="/portfolio_melchior/public/index.php#contact">Me contacter</a>
+            <a class="text-white mx-5" href="https://melchior-reynaud.fr/#contact">Me contacter</a>
         </li>
     </ul>
 
@@ -44,5 +44,5 @@
         </div>
     </div>
 </header>
-<script src="../public/js/script.js"></script>
+<script src="/js/script.js"></script>
 
