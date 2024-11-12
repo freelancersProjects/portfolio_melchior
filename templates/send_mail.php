@@ -4,6 +4,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 require_once '../src/services/HomeService.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = trim($_POST['name']);
@@ -21,15 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->Host = $_ENV['SMTP_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'aa760c90347635';
-        $mail->Password = 'a0af44ddadde6c';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 2525;
-
-        $mail->setFrom('no-reply@vacanows.com', $name);
-        $mail->addAddress('mathis.oxym@gmail.com');
+        $mail->Username = $_ENV['SMTP_USERNAME'];
+        $mail->Password = $_ENV['SMTP_PASSWORD'];
+        $mail->SMTPSecure = $_ENV['SMTP_SECURE'];
+        $mail->Port = $_ENV['SMTP_PORT'];
+        $mail->setFrom($_ENV['MAIL_FROM'], $name);
+        $mail->addAddress('melchior.reynaud7@gmail.com');
 
         $mail->isHTML(true);
         $mail->Subject = "Nouveau message de: $name - $subject";

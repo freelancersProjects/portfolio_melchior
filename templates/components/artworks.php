@@ -20,7 +20,7 @@
             <?php foreach ($latestArtworks as $artwork): ?>
                 <div class="col-md-4">
                     <div class="artwork-card">
-                        <img src="<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
+                        <img src="https://ganfgsptxa.melchior-reynaud.fr/uploads/images/<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
                         <h3 class="artwork-title"><?= htmlspecialchars($artwork['title']); ?></h3>
                         <p class="artwork-description">
                             <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr(stripHtmlTags($artwork['description']), 0, 200) . '...' : stripHtmlTags($artwork['description'])); ?>

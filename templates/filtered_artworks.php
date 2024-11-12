@@ -11,7 +11,7 @@ include 'components/header.php';
 
 <div class="container-fluid mt-5">
     <div class="row">
-    <h2 class="text-center font-family-della-respira titre-glob mb-5">  
+    <h2 class="text-center font-family-della-respira titre-glob mb-5">
         <?= htmlspecialchars($selectedFilterName); ?>
     </h2>
         <div class="filter-dropdown-container mb-4 p-0">
@@ -30,7 +30,7 @@ include 'components/header.php';
             <?php foreach ($artworks as $artwork): ?>
                 <div class="col-md-4">
                     <div class="artwork-card">
-                        <img src="<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
+                        <img src="https://ganfgsptxa.melchior-reynaud.fr/uploads/images/<?= htmlspecialchars($artwork['main_image']); ?>" class="artwork-img-top" alt="<?= htmlspecialchars($artwork['title']); ?>">
                         <h3 class="artwork-title"><?= htmlspecialchars($artwork['title']); ?></h3>
                         <p class="artwork-description">
                             <?= htmlspecialchars(strlen($artwork['description']) > 100 ? substr(stripHtmlTags($artwork['description']), 0, 200) . '...' : stripHtmlTags($artwork['description'])); ?>

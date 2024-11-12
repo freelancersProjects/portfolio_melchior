@@ -14,7 +14,7 @@ include 'components/header.php';
             <?php if (isset($selectedArtwork) && isset($_GET['id'])): ?>
                 <h1 class="text-center font-family-della-respira titre-glob mb-5"><?= htmlspecialchars($selectedArtwork['title']); ?></h1>
                 <div class="col-md-6">
-                    <img src="<?= htmlspecialchars($selectedArtwork['main_image']); ?>" class="artwork-main-image" alt="<?= htmlspecialchars($selectedArtwork['title']); ?>">
+                    <img src="https://ganfgsptxa.melchior-reynaud.fr/uploads/images/<?= htmlspecialchars($selectedArtwork['main_image']); ?>" class="artwork-main-image" alt="<?= htmlspecialchars($selectedArtwork['title']); ?>">
                 </div>
                 <div class="col-md-6">
                 <div class="audio-player mb-4">
@@ -27,7 +27,7 @@ include 'components/header.php';
                 <span class="current-time" id="current-time">0:00</span>
                 <span class="duration" id="duration">0:00</span>
             </div>
-            <audio id="audio" src="<?= htmlspecialchars($selectedArtwork['audio_artwork']); ?>" type="audio/mpeg"></audio>
+            <audio id="audio" src="https://ganfgsptxa.melchior-reynaud.fr/uploads/audios/<?= htmlspecialchars($selectedArtwork['audio_artwork']); ?>" type="audio/mpeg"></audio>
                     <p class="font-family-montserrat fs-15px">
                         <?= ignoreSpecificTags($selectedArtwork['description'], 'div'); ?>
                     </p>
