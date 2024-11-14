@@ -4,8 +4,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Redirige vers index.php pour traiter toutes les requêtes
-RewriteRule ^ index.php [QSA,L]
-
-# Gérer les erreurs 404
-ErrorDocument 404 /404.php
+# Rediriger toutes les requêtes non existantes vers 404.php
+RewriteRule ^ /404.php [L]
