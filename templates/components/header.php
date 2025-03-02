@@ -21,29 +21,31 @@
 
 <header class="background-header font-family-della-respira font-weight-regular container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark p-3">
-        <a class="navbar-brand text-white mx-5 fs-5 font-weight-regular titre-header" href="/">Melchior</a>
+        <!-- <a class="navbar-brand text-white mx-5 fs-5 font-weight-regular titre-header" href="/">Melchior</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item mt-3 mt-lg-0">
-                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#biography">Biographie</a>
+                    <a class="text-white mx-5" href="/">Accueil</a>
                 </li>
                 <li class="nav-item mt-3 mt-lg-0">
-                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#mes-oeuvres">Mes oeuvres</a>
+                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#biography"><?= $content[0]['title_bio']; ?></a>
+                </li>
+                <li class="nav-item mt-3 mt-lg-0">
+                    <a class="text-white mx-5" href="https://melchior-reynaud.fr/#mes-oeuvres"><?= isset($content[0]['title_artwork']) ? $content[0]['title_artwork'] : 'Les œuvres'; ?></a>
                 </li>
                 <li class="nav-item mt-3 mt-lg-0">
                     <a class="text-white mx-5" href="https://melchior-reynaud.fr/#contact">Me contacter</a>
                 </li>
             </ul>
-
         </div>
     </nav>
-    <div class="d-flex align-items-center justify-content-center h-100">
+    <!-- <div class="d-flex align-items-center justify-content-center h-100">
         <div class="text-center text-white textHeader">
             <h1 id="main-name"><?= $content[0]['main_name']; ?></h1>
         </div>
-    </div>
+    </div> -->
 </header>
 <script src="/js/script.js"></script>
