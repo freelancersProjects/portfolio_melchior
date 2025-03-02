@@ -15,7 +15,7 @@ include 'send_mail.php';
 <section id="biography">
     <div class="bg-gray p-5">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <h2 class="text-center font-family-della-respira titre-glob mb-5"><?= $content[0]['title_bio']; ?></h2>
                 <div class="col-md-7">
                     <p class="font-family-montserrat font-weight-semi-bold color-dark-blue fs-15px">
